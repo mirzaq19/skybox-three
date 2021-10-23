@@ -11,8 +11,12 @@ scene.add(new THREE.AmbientLight(0xffffbb, 0.5));
 
 //========== Create Geometry
 const arrGeo = [];
-const cube1 = createCube(3, 3, 3, 0x00aaff);
-arrGeo.push(cube1);
+const cube1 = createCube(3, 3, 3);
+const cube2 = createCube(3, 3, 3);
+cube2.position.x += 7;
+const cube3 = createCube(3, 3, 3);
+cube3.position.x -= 7;
+arrGeo.push(cube1, cube2, cube3);
 
 arrGeo.forEach((geo) => {
   scene.add(geo);
